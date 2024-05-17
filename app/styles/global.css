@@ -1,11 +1,13 @@
 :root {
   --color-primary: #db9034;
-  --color-secondary: #2ecc71;
+  --color-secondary: #98b0dc;
   --color-accent: #e74c3c;
+  --color-hover: #3b3b79;
 }
 
 body {
   line-height: 1.2rem;
-  background: rgb(31, 31, 65);
-  color: rgb(242, 242, 242);
+  background: #1f1f41;
+  color: #f4f4f4;
+  box-sizing: border-box;
 }

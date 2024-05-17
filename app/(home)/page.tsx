@@ -26,16 +26,16 @@ async function HomePage() {
     <>
       <main className={styles.mainContainer}>
         <h2 className={styles.title}>Billionaires</h2>
-        <h2 className={styles.title}>{datas.length} People Registered</h2>
+        <h3 className={styles.subTitle}>{datas.length} People Registered</h3>
         <ul className={styles.cardConatiner}>
           {datas &&
             datas.slice(0, 60).map((data) => (
               <li className={styles.card} key={data.id}>
                 <Link href={`billionaire/${data.id}`}>
-                  {data?.squareImage === "https:undefined" ? (
+                  {data.squareImage === "https:undefined" ? (
                     <div className={styles.imgUndefind}></div>
                   ) : (
-                    <img className={styles.img} src={data?.squareImage} alt={data.id} />
+                    <img className={styles.img} src={data.squareImage} alt={data.id} />
                   )}
                   <div>
                     <h3 className={styles.subTitle}>{data.name} </h3>

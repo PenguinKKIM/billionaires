@@ -1,6 +1,9 @@
+
+
 import { title } from "process";
 import { API_URL } from "../../../(home)/page";
 import styles from "../../../styles/BillionairePage.module.css";
+
 interface FinancialAsset {
   exchange: string;
   ticker: string;
@@ -30,7 +33,7 @@ interface Data {
   netWorth: number;
 }
 
-const fetchData = async (id: string): Promise<Data> => {
+const fetchDataById = async (id: string): Promise<Data> => {
   try {
     const response = await fetch(`${API_URL}/person/${id}`);
     const json = await response.json();
@@ -42,7 +45,7 @@ const fetchData = async (id: string): Promise<Data> => {
 };
 
 async function BillionairePage({ params: { id } }: { params: { id: string } }) {
-  const data: Data = await fetchData(id);
+  const data: Data = await fetchDataById(id);
 
   return (
     <>
@@ -50,10 +53,11 @@ async function BillionairePage({ params: { id } }: { params: { id: string } }) {
         <h2 className={styles.title}>{data.name}</h2>
         <section className={styles.sectionContainer}>
           <img className={styles.squareImage} src={data?.squareImage} alt={data.id} />
-          <p>{data.state}</p>
-          <ul>
+          <h2 className={styles.subTitle}>Position : {data.position}</h2>
+          <p>{!data.state ? <></> : <>{data.state}, </>} {data.city}, {data.country}</p>
+          <ul className={styles.bioContainer}>
             {data.bio?.map((bio, index) => (
-              <li key={index}>{bio}</li>
+              <li className={styles.bio} key={index}>{bio}</li>
             ))}
           </ul>
         </section>

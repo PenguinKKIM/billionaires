@@ -24,19 +24,29 @@
 .squareImage {
   width: 500px;
 }
+.bioContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.bio {
+  border: 1px solid rgba(240, 240, 240, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: var(--color-hover);
+}
 .cardContainer {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .card {
-  border: 1px solid rgb(234, 234, 234);
+  border: 1px solid rgba(240, 240, 240, 0.1);
   border-radius: 10px;
   padding: 1rem;
   &:hover {
-    background-color: blue;
+    background-color: var(--color-hover);
     cursor: pointer;
   }
 }
@@ -52,5 +62,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
 }
