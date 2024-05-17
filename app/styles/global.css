@@ -1,0 +1,11 @@
+:root {
+  --color-primary: #db9034;
+  --color-secondary: #2ecc71;
+  --color-accent: #e74c3c;
+}
+
+body {
+  line-height: 1.2rem;
+  background: rgb(31, 31, 65);
+  color: rgb(242, 242, 242);
+}
