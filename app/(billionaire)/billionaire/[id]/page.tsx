@@ -1,7 +1,8 @@
 
 
-import { title } from "process";
-import { API_URL } from "../../../(home)/page";
+
+
+import { API_URL } from "../../../constants";
 import styles from "../../../styles/BillionairePage.module.css";
 
 interface FinancialAsset {

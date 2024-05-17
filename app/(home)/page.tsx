@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "../../app/styles/HomePage.module.css";
-/**루트 세그먼트 */
-export const API_URL = "https://billions-api.nomadcoders.workers.dev";
+import { API_URL } from "../constants";
 
 interface Datas {
   id: string;
